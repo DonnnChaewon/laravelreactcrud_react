@@ -1,3 +1,29 @@
 body {
   background: rgb(103, 144, 155);
 }
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+table, tr, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+}
+
+.buttons-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 5px;
+}

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
-import {useParams, useNavigate} from 'react-router-dom'
+import {useParams, useNavigate, Link} from 'react-router-dom'
+import './App.css'
 
 function Edit() {
     const navigate = useNavigate()
@@ -27,7 +28,7 @@ function Edit() {
         setMessage(response.data.message)
         console.log(response)
         setTimeout(() => {
-            navigate('/topicslist')
+            navigate('/')
         }, 2000)
     }
 
@@ -59,14 +60,14 @@ function Edit() {
                             <div className='mb-3 row'>
                                 <label className='col-sm-3'>Title</label>
                                 <div className='col-sm-9'>
-                                    <input type='text' value={inputs.title} className='form-control' name='name' onChange={handleChange} />
+                                    <input type='text' value={inputs.title} className='form-control' id='title' name='title' onChange={handleChange} />
                                 </div>
                             </div>
 
                             <div className='mb-3 row'>
                                 <label className='col-sm-3'>Description</label>
                                 <div className='col-sm-9'>
-                                    <textarea value={inputs.description} className='form-control' name='description' onChange={handleChange} />
+                                    <textarea value={inputs.description} className='form-control' id='description' name='description' onChange={handleChange} />
                                 </div>
                             </div>
 
@@ -74,14 +75,15 @@ function Edit() {
                                 <label className='col-sm-3'>Image</label>
                                 <div className='col-sm-9'>
                                     <img src={`http://localhost:8000/storage/${inputs.image}`} height='50%' width='50%' />
-                                    <input type='file' className='form-control' onChange={(e) => setImage(e.target.files[0])} />
+                                    <input type='file' className='form-control' id='image' name='image' onChange={(e) => setImage(e.target.files[0])} />
                                 </div>
                             </div>
 
                             <div className='mb-3 row'>
                                 <label className='col-sm-3'></label>
-                                <div className='col-sm-9'>
-                                    <button type='submit' className='btn btn-success'>Submit</button>
+                                <div className='buttons-edit'>
+                                    <Link to={`/`} className='btn btn-primary'>Back to Home</Link>
+                                    <button type='submit' className='btn btn-primary'>Submit Changes</button>
                                 </div>
                             </div>
                         </form>

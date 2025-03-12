@@ -1,23 +1,20 @@
 import React from 'react'
 import './App.css'
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import Header from './Header'
-import Add from './Add'
-import List from './List'
+import Home from './Home'
 import Edit from './Edit'
+import View from './View'
 
 function App() {
   return (
-    <div className='App'>
+    <div>
       <Router>
-        <Header />
         <Routes>
-          <Route exact path='/addtopic' element={<Add />} />
-          <Route exact path='/topicslist' element={<List />} />
-          <Route path='edittopic/:id/edit' element={<Edit />} />
+          <Route exact path='/' element={<Home />} />
+          <Route path='/edit/:id' element={<Edit />} />
+          <Route path='/view/:id' element={<View />} />
         </Routes>
       </Router>
-
     </div>
   )
 }
