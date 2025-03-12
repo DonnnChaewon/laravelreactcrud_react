@@ -66,9 +66,9 @@ function Home() {
     }
 
     return (
-        <React.Fragment>
+        <React.Fragment><br />
             <div className='container'>
-                <div className='row'><br />
+                <div className='row'>
                     <h5 className='mb-4'><center>Add Topic</center></h5>
                     <p className='text-warning'>{message}</p>
 

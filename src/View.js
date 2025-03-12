@@ -31,8 +31,7 @@ function View() {
     return (
         <>
         <div className='container'>
-            <h1>Topic Details</h1>
-            <hr />
+            <h1>Topic Details</h1><hr />
             <h3>{topic.title}</h3>
             {topic.image ? (
                 <img src={`http://localhost:8000/storage/${topic.image}`} width='75%' height='75%' alt='Topic' />

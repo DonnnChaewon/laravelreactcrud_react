@@ -53,7 +53,7 @@ function Edit() {
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-8 mt-4'>
-                        <h5 className='mb-4'>Edit Topic</h5>
+                        <h1 className='mb-4'>Edit Topic</h1><hr />
                         <p className='text-success'><b>{message}</b></p>
 
                         <form onSubmit={handleSubmit}>
