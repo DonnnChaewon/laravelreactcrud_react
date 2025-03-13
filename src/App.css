@@ -12,11 +12,11 @@ table, tr, th, td {
   border-collapse: collapse;
 }
 
-.buttons {
+.buttons-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   padding: 5px;
 }
 
