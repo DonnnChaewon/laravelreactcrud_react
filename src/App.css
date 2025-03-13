@@ -12,7 +12,7 @@ table, tr, th, td {
   border-collapse: collapse;
 }
 
-.buttons-list {
+.buttons {
   display: flex;
   flex-direction: column;
   align-items: center;

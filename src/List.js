@@ -45,7 +45,7 @@ function List({topics, getTopic}) {  // Receive props from Home.js
                                             )) : ''}
                                         </center></td>
                                         <td><center><img src={`http://localhost:8000/storage/${data.image}`} height='50%' width='50%' /></center></td>
-                                        <td><div className='buttons-list'>
+                                        <td><div className='buttons'>
                                             <Link to={`/view/${data.id}/`} className='btn btn-success'>View</Link>
                                             <Link to={`/edit/${data.id}/`} className='btn btn-warning'>Edit</Link>
                                             <button onClick={() => deleteTopic(data.id)} className='btn btn-danger'>Delete</button>
