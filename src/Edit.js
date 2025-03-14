@@ -52,35 +52,34 @@ function Edit() {
         <React.Fragment>
             <div className='container'>
                 <div className='row'>
-                    <div className='col-md-8 mt-4'>
+                    <div className='col-md-12 mt-4'>
                         <h1 className='mb-4'>Edit Topic</h1><hr />
                         <p className='text-success'><b>{message}</b></p>
 
                         <form onSubmit={handleSubmit}>
-                            <div className='mb-3 row'>
-                                <label className='col-sm-3'>Title</label>
-                                <div className='col-sm-9'>
+                            <div className='mb-4 row'>
+                                <label className='col-sm-2'>Title</label>
+                                <div className='col-sm-10'>
                                     <input type='text' value={inputs.title} className='form-control' id='title' name='title' onChange={handleChange} />
                                 </div>
                             </div>
 
-                            <div className='mb-3 row'>
-                                <label className='col-sm-3'>Description</label>
-                                <div className='col-sm-9'>
+                            <div className='mb-4 row'>
+                                <label className='col-sm-2'>Description</label>
+                                <div className='col-sm-10'>
                                     <textarea value={inputs.description} className='form-control' id='description' name='description' onChange={handleChange} />
                                 </div>
                             </div>
 
-                            <div className='mb-3 row'>
-                                <label className='col-sm-3'>Image</label>
-                                <div className='col-sm-9'>
+                            <div className='mb-2 row'>
+                                <label className='col-sm-2'>Image</label>
+                                <div className='col-sm-10'>
                                     <img src={`http://localhost:8000/storage/${inputs.image}`} height='50%' width='50%' />
                                     <input type='file' className='form-control' id='image' name='image' onChange={(e) => setImage(e.target.files[0])} />
                                 </div>
                             </div>
 
-                            <div className='mb-3 row'>
-                                <label className='col-sm-3'></label>
+                            <div className='mt-3 row'>
                                 <div className='buttons-edit'>
                                     <Link to={`/`} className='btn btn-primary'>Back to Home</Link>
                                     <button type='submit' className='btn btn-primary'>Submit Changes</button>

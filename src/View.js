@@ -24,14 +24,24 @@ function View() {
         }
     }
 
-    if(loading) return <p>Loading...</p>
+    if(loading) return (
+        <>
+        <br />
+        <h2><center>Loading content...</center></h2>
+        </>
+    )
 
-    if(!topic) return <p>Topic not found!</p>
+    if(!topic) return (
+        <>
+        <br />
+        <h2><center>Topic not found!</center></h2>
+        </>
+    )
 
     return (
         <>
         <div className='container'>
-            <h1>Topic Details</h1><hr />
+            <br /><h1>Topic Details</h1><hr />
             <h3>{topic.title}</h3>
             {topic.image ? (
                 <img src={`http://localhost:8000/storage/${topic.image}`} width='75%' height='75%' alt='Topic' />

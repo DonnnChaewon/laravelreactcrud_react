@@ -73,38 +73,38 @@ function Home() {
                     <p className='text-warning'>{message}</p>
 
                     <form onSubmit={handleSubmit}>
-                        <div className='mb-3 row'>
-                            <label className='col-sm-3'>Title</label>
-                            <div className='col-sm-9'>
+                        <div className='mb-4 row'>
+                            <label className='col-sm-2'>Title</label>
+                            <div className='col-sm-10'>
                                 <input type='text' className='form-control' id='title' name='title' value={title} onChange={(e) => setTitle(e.target.value)} />
                             </div>
                         </div>
 
-                        <div className='mb-3 row'>
-                            <label className='col-sm-3'>Description</label>
-                            <div className='col-sm-9'>
+                        <div className='mb-4 row'>
+                            <label className='col-sm-2'>Description</label>
+                            <div className='col-sm-10'>
                                 <textarea className='form-control' id='description' name='description' value={description} onChange={(e) => setDescription(e.target.value)} />
                             </div>
                         </div>
 
-                        <div className='mb-3 row'>
-                            <label className='col-sm-3'>Image</label>
-                            <div className='col-sm-9'>
+                        <div className='mb-4 row'>
+                            <label className='col-sm-2'>Image</label>
+                            <div className='col-sm-10'>
                                 <input type='file' className='form-control' id='image' name='image' ref={fileInputRef} onChange={(e) => setImage(e.target.files[0])} />
                             </div>
                         </div>
 
-                        <div className='mb-3 row'>
-                            <label className='col-sm-3'></label>
-                            <div className='col-sm-9'>
+                        <div className='mb-4 row'>
+                            <label className='col-md-2'></label>
+                            <div className='col-sm-10'>
                                 <button type='submit' className='btn btn-primary'>Submit</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <hr />
-            <div className='container'>
+            <hr /><br />
+            <div className='mb-4 row'>
                 <List topics={topics} getTopic={getTopic} /> {/* Pass topics and getTopic */}
             </div>
         </React.Fragment>

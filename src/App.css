@@ -24,6 +24,5 @@ table, tr, th, td {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  padding: 5px;
+  gap: 50px;
 }
