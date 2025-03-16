@@ -40,6 +40,7 @@ function List({topics, getTopic}) {  // Receive props from Home.js
                                         <td><center>{i+1}</center></td>
                                         <td><center>{data.title}</center></td>
                                         <td><center>
+                                            {/* View description with seperated paragraphs based on input */}
                                             {data.description ? data.description.split('\n').map((paragraph, index) => (
                                                 <p key={index}>{paragraph}</p>
                                             )) : ''}

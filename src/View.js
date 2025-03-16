@@ -49,7 +49,7 @@ function View() {
                 <p>The image link may be broken or invalid.</p>
             )}
             <br /><br />
-            {/* Render description with line breaks */}
+            {/* View description with seperated paragraphs based on input */}
             {topic.description ? topic.description.split('\n').map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
             )) : ''}
